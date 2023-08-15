@@ -1,0 +1,26 @@
+status=""
+while True:
+    command= input(">>>").lower()
+    if command=="start":
+        if status=="start":
+            print("Car has already started...")
+        else:
+            print("Car started, ready to go...")
+            status="start"
+    elif command=="stop":
+        if status=="stop":
+            print("Car has already stoppped...")
+        else:
+            print("car stopped")
+            status="stop"
+    elif command=="help":
+        print("""
+start: To start the car.
+stop: To stop the car.
+exit: To exit the game.
+             """)
+    elif command=="exit":
+        break
+
+    else:
+        print("Invalid comment!")
